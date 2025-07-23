@@ -1,10 +1,15 @@
 import mongoose from 'mongoose';
 import { Worker } from 'bullmq';
 import { Message } from '../models/message.model';
+import dotenv from 'dotenv';
+
+
+dotenv.config();
 
 async function startWorker() {
   try {
-    await mongoose.connect('mongodb://localhost:27017/email-system');
+    // Use process.env for MongoDB URI
+    await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/email-system');
     console.log('✅ Worker connected to MongoDB');
 
     const worker = new Worker(
@@ -27,8 +32,9 @@ async function startWorker() {
       },
       {
         connection: {
-          host: 'localhost',
-          port: 6379,
+         
+          host: process.env.REDIS_HOST || 'localhost',
+          port: parseInt(process.env.REDIS_PORT || '6379', 10), 
         },
       }
     );
