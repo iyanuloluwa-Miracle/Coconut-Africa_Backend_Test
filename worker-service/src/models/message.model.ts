@@ -6,6 +6,7 @@ export interface IMessage extends Document {
   createdAt: Date;
 }
 
+
 const messageSchema = new Schema<IMessage>({
   email: { type: String, required: true },
   message: { type: String, required: true },
