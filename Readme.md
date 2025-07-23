@@ -18,6 +18,13 @@ You can explore and test all endpoints using the public Postman collection:
 
 -----
 
+
+## Screenshot
+
+![Alt text for the image](screenshot/Screenshot%202025-1.png)
+![Alt text for the image](screenshot/Screenshot%202025-07-2.png)
+
+
 ## Prerequisites
 
 Ensure you have the following installed:
