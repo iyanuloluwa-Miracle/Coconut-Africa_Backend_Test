@@ -6,6 +6,11 @@ A two-microservice system built with Node.js, TypeScript, Mongoose, Redis, and B
 
 ## Overview
 
+## API Documentation
+
+You can explore and test all endpoints using the public Postman collection:
+[API Docs on Postman](https://documenter.getpostman.com/view/29992846/2sB34mjJYS)
+
   * **API Service**: This service accepts `POST` requests at `/messages` with an email and message, validates the input, saves it to MongoDB, and adds a job to a Redis queue.
   * **Worker Service**: This service listens to the Redis queue, fetches messages from MongoDB, and logs a simulated email send.
   * **MongoDB**: Stores messages in the `email-system` database.
@@ -62,10 +67,13 @@ email-processing-system/
 │   └── tsconfig.json
 └── README.md
 ```
+<!-- Screenshot suggestion: Attach a screenshot of the folder structure here -->
 
 -----
 
 ## Setup
+
+<!-- Screenshot suggestion: Add screenshots for MongoDB/Redis running, and service startup here -->
 
 Follow these steps to set up and run the system:
 
@@ -132,6 +140,8 @@ Open new terminal windows for each service:
 
 ## API Endpoints
 
+<!-- Screenshot suggestion: Attach screenshots of Postman requests and responses for each endpoint below -->
+
 ### `POST /messages`
 
 Create a new message.
@@ -167,6 +177,8 @@ curl http://localhost:3001/messages
 -----
 
 ## Testing
+
+<!-- Screenshot suggestion: Attach screenshots of terminal output for successful processing and validation errors here -->
 
 ### Test the System
 
